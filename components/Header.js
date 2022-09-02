@@ -1,10 +1,15 @@
 import Image from "next/image"
-import {BetllIcon, ChatIcon, ChevronDownIcon,HomeIcon,
+import {BetllIcon, CashIcon, ChatIcon, ChevronDownIcon,HomeIcon,
     UserGroupIcon,ViewGridIcon,} from "@heroicons/react/solid"
 import {FlagIcon, PlayIcon, SearchIcon,ShoppingCartIcon} from "@heroicons/react/outline"
 // import { BeakerIcon, } from '@heroicons/react/24/solid'
+import {useSession, signOut } from "next-auth/react"
 
 function Header() {
+  
+  const { data: sessionData } = useSession()
+  const myname =sessionData.user.name;
+  const myimg = sessionData.user.image;
   return (
    <div className="sticky top-o z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
     
@@ -50,10 +55,21 @@ function Header() {
     </div>
     <div className="flex items-center sm:space-x-7 justify-end">
         {/* Profile Pic */}
-        <p className="whitespace-nowrap font-semibold pr-3">Steven Kamwaza</p>
+        <div className="flex items-center">
+          <Image
+            className="rounded-full  h-6 cursor-pointer"
+            src={myimg}
+            width={40}
+            height={40}
+            layout= "fixed"
+          />
+        </div>
+        <p className="whitespace-nowrap font-semibold pr-3">{myname}</p>
         <ViewGridIcon className="icon"/>
         <ChatIcon className="icon"/>
         <ChevronDownIcon className="icon"/>
+        {/* <CashIcon className="h-5 text-red-600"/> */}
+
       </div>
    </div>
   )
