@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* @import './base.css'; */
+@import 'tailwindcss/utilities';
+
+@layer components{
+
+  .icon{
+    @apply hidden xl:inline-flex p-2 h-14 w-12 cursor-pointer hover:bg-gray-300;
+  }
+};
