@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Login from '../components/Login'
 import {getSession, useSession, signOut } from "next-auth/react"
 import SideNav from '../components/SideNav'
+import MediaFeed from '../components/MediaFeed'
 
 export default function Home({session}) {
   const { data: sessionData } = useSession()
@@ -22,13 +23,11 @@ export default function Home({session}) {
         </Head> 
         {/* Header */}
         <Header/> 
-        <main className='flex'>
+        <main className='flex bg-gray-200'>
 
-          <SideNav/>
-          <h1 className="text-3xl font-bold underline">
-          hey
-          </h1>
-          <button className='btn bg-blue-600 text-white roundend-full' onClick={() => signOut()}>Sign out</button>
+          <SideNav className="bg-white"/>
+          <MediaFeed/>
+          {/* <button className='btn bg-blue-600 text-white roundend-full' onClick={() => signOut()}>Sign out</button> */}
         </main>
         
       </div>

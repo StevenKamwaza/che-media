@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-
+ 
 function SideNavIcon({src,Icon, title}) {
   return (
     <div className='flex items-center space-x-2 p-4 hover: bg-gray-200 rounded-xl cursor-pointer'> 
@@ -15,7 +15,7 @@ function SideNavIcon({src,Icon, title}) {
       {Icon && (
         <Icon className="h-8 text-blue-600"/>
       )}
-      <p className='hidden sm: inline-flex font-medium '>{title}</p>
+      <p className=' sm:inline-flex font-medium '>{title}</p>
     </div>
   )
 }
