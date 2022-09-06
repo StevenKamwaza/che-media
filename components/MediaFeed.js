@@ -1,6 +1,7 @@
 import React from 'react'
-import DataEntry from './feeds/DataEntry'
+import DataEntry from './DataEntry'
 import Stories from './feeds/Stories'
+import Posts from './Posts'
 
 function MediaFeed() {
   return (
@@ -8,6 +9,7 @@ function MediaFeed() {
       <div className='mx-auto max-w-md md:max-w-lg lg:max-w-2xl'>
         <Stories/>
         <DataEntry/>
+        <Posts/>
       </div>
     </div>
   )
