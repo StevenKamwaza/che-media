@@ -25,7 +25,7 @@ function Posts() {
 
   return (
     <div>
-      <h1>Posts</h1>
+      
       {posts.map(item => {
         return (
           <Post
@@ -35,15 +35,6 @@ function Posts() {
             image= {item.image}
           />
         )
-        // /* Returning the data from the database. */
-        // return (
-        //   <div key={item.id}>
-        //     <h2>name: {item.name}</h2>
-        //     <h2>message: {item.message}</h2>
-
-        //     <hr />
-        //   </div>
-        // );
       })}
     </div>
   )

@@ -14,6 +14,10 @@ function SideNav() {
       <SideNavIcon Icon ={UsersIcon} title ="Friends"/>
       <SideNavIcon Icon ={UserGroupIcon} title ="Groups"/>
       <SideNavIcon Icon ={ShoppingBagIcon} title ="MarketPlace"/>
+      <SideNavIcon Icon ={CheveronIcon} title ="MarketPlace"/>
+      <SideNavIcon Icon ={ClockIcon} title ="Time"/>
+      <SideNavIcon Icon ={DesktopComputerIcon} title ="Desktop"/>
+      <SideNavIcon Icon ={CalendarIcon} title ="Calendar"/>
     </div>
   )
 }

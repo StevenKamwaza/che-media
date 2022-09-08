@@ -1,7 +1,7 @@
 import Image from "next/image"
 import {BetllIcon, CashIcon, ChatIcon, ChevronDownIcon,HomeIcon,
     UserGroupIcon,ViewGridIcon,} from "@heroicons/react/solid"
-import {FlagIcon, PlayIcon, SearchIcon,ShoppingCartIcon} from "@heroicons/react/outline"
+import {FlagIcon, LogoutIcon, PlayIcon, SearchIcon,ShoppingCartIcon} from "@heroicons/react/outline"
 // import { BeakerIcon, } from '@heroicons/react/24/solid'
 import {useSession, signOut } from "next-auth/react"
 
@@ -68,6 +68,7 @@ function Header() {
         <ViewGridIcon className="icon"/>
         <ChatIcon className="icon"/>
         <ChevronDownIcon className="icon"/>
+        <LogoutIcon onClick={() => signOut()} className=" icon  hover:text-red-600"/>
         {/* <CashIcon className="h-5 text-red-600"/> */}
 
       </div>
